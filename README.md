@@ -1,6 +1,6 @@
 # <p align="center"> Game Name: Dark Castle </p>
 
-## Engine: [Godot](https://godotengine.org/)
+## <p align="center"> Engine: [Godot](https://godotengine.org/) </p> 
 
 #### To launch the games .exe, go to EXE and launch Dark_Castle.exe.
 
