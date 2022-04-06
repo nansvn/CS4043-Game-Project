@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Start Screen Music.wav-f26ef8f9df4724c6469d7113cd15cebd.sample"
+
+[deps]
+
+source_file="res://UI/Audio/Start Screen Music.wav"
+dest_files=[ "res://.import/Start Screen Music.wav-f26ef8f9df4724c6469d7113cd15cebd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

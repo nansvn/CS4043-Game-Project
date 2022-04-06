@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/Menu/Credit.gd" type="Script" id=2]
+[ext_resource path="res://Map/Asset/background-black.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 89
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Credit" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 492.849, 240.558 )
+texture = ExtResource( 3 )
+
+[node name="Tille" type="VBoxContainer" parent="."]
+margin_left = -0.577026
+margin_top = -3.61713
+margin_right = 958.423
+margin_bottom = 114.383
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Tille"]
+margin_right = 959.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 241.681
+margin_top = 96.2752
+margin_right = 711.681
+margin_bottom = 478.275
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Left"]
+margin_right = 470.0
+margin_bottom = 405.0
+custom_fonts/font = SubResource( 2 )
+text = "Coding:
+Kamil Skiba
+Nan Sun
+Rian O’ Leary
+
+Art & Sound:
+Darragh Walsh
+Saw Pu"
+align = 1
+
+[node name="Tip" type="VBoxContainer" parent="."]
+margin_left = 282.881
+margin_top = 529.504
+margin_right = 700.881
+margin_bottom = 577.504
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tip"]
+margin_right = 418.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 3 )
+text = "Press ESC to return"

@@ -1,0 +1,291 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Map/Room6/Room 6.png" type="Texture" id=1]
+[ext_resource path="res://Characters/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Characters/Player/spritesheet.png" type="Texture" id=3]
+[ext_resource path="res://Map/Room6/Room6.gd" type="Script" id=4]
+[ext_resource path="res://Map_Clear/4/Room6/Room6_4.gd" type="Script" id=5]
+[ext_resource path="res://Map/Room6/toRoom7.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 96.8306, 20.1588 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 13.411
+
+[sub_resource type="Animation" id=3]
+resource_name = "Down"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 0, 5 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "IdleDown"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "IdleLeft"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "IdleRight"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 7, 11 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 4 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 11 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 12 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 14 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Left"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Down"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "Right"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "Up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 16 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 17 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 18 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 19 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/Idle/node = SubResource( 15 )
+states/Idle/position = Vector2( 310, 89 )
+states/Walk/node = SubResource( 20 )
+states/Walk/position = Vector2( 602, 89 )
+transitions = [ "Idle", "Walk", SubResource( 21 ), "Walk", "Idle", SubResource( 22 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=24]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 22.0472, 104.118 )
+
+[node name="Room" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Black" type="Sprite" parent="."]
+light_mask = 2
+position = Vector2( 481.629, 280.762 )
+scale = Vector2( 0.736567, 0.867967 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2( 6.99207, 1.1604 )
+polygon = PoolVector2Array( 3.42171, 157.706, 63.8111, 159.03, 63.5462, 9.5584, 66.1949, 9.42597, 66.5922, 162.076, 5.0109, 162.871, 7.73074, 284.27, 66.1336, 284.005, 67.3255, 527.466, 439.056, 526.671, 438.944, 587.698, 570.652, 587.309, 571.314, 526.021, 928.401, 527.213, 928.799, 11.9422, 67.9165, 11.8098, 67.1219, 9.29353, 931.315, 9.1611, 931.05, 528.934, 574.375, 529.201, 573.168, 591.414, 434.95, 590.852, 434.74, 530.518, 62.6904, 530.512, 63.2201, 286.389, 4.41991, 287.846 )
+
+[node name="Room6" type="Area2D" parent="."]
+position = Vector2( 512.696, 558.932 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room6"]
+position = Vector2( -0.12664, 15.5528 )
+scale = Vector2( 0.801596, 0.914167 )
+shape = SubResource( 1 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 505.503, 461.812 )
+scale = Vector2( 0.9, 0.9 )
+collision_layer = 2147483650
+collision_mask = 13
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( -1.68649, -25.636 )
+rotating = true
+current = true
+zoom = Vector2( 0.75, 0.75 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 0.602234, -10.2739 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+vframes = 3
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 0.0716705, 32.1653 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/Down = SubResource( 3 )
+anims/IdleDown = SubResource( 4 )
+anims/IdleLeft = SubResource( 5 )
+anims/IdleRight = SubResource( 6 )
+anims/IdleUp = SubResource( 7 )
+anims/Left = SubResource( 8 )
+anims/Right = SubResource( 9 )
+anims/Up = SubResource( 10 )
+
+[node name="AnimationTree" type="AnimationTree" parent="Player"]
+tree_root = SubResource( 23 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 24 )
+parameters/Idle/blend_position = Vector2( 0.0185472, 0.801724 )
+parameters/Walk/blend_position = Vector2( 0.0170015, 0.818966 )
+
+[node name="Room7" type="Area2D" parent="."]
+position = Vector2( 49.3404, 239.893 )
+script = ExtResource( 6 )
+target_scene = "res://Map/Room7/Room7.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room7"]
+position = Vector2( -18.4465, -14.4662 )
+scale = Vector2( 0.777664, 0.662391 )
+shape = SubResource( 25 )
