@@ -1,4 +1,4 @@
-# <p align="center"> Game Name: Dark Castle </p>
+# <p align="center"> <img src="https://github.com/Nansun1202/Nansun1202/blob/main/emoji/castle.gif?raw=true" width="30"/> Game Name: Dark Castle </p>
 
 ## <p align="center"> Engine: [Godot](https://godotengine.org/) </p> 
 
