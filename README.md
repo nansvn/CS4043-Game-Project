@@ -2,8 +2,8 @@
 
 ## <p align="center"> Engine: [Godot](https://godotengine.org/) </p> 
 
-#### To launch the games .exe, go to EXE and launch Dark_Castle.exe.
+#### To launch the games .exe, go to /EXE and launch Dark_Castle.exe
 
-#### If you would like to check out the assets and codes of the game, they can be found under the directory /Source
+#### If you would like to check out the assets and codes of the game, they can be found under the /Source
 
 #### To access the game's lastest updated Game Design Document, check /Docs/Game_Design_Document.pdf
